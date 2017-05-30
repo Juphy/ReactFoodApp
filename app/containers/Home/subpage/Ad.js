@@ -28,7 +28,7 @@ export default class Ad extends Component{
                             <img src={item.img} title={item.title}/>
                         </a>
                     )):
-                    <div>正在加载...</div>
+                    <div>正在加载。。。</div>
                 }
             </div>
         )

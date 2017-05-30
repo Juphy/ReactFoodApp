@@ -20,5 +20,8 @@ npm install express -S
         - subpage 智能组件
         - index.js
 - index.js 用来控制显示哪一个页面
-        
+- store
+- actions 用户发布不同的动作
+- reducers 
+- actionTypes
 
