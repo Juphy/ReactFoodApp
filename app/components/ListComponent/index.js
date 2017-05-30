@@ -8,7 +8,7 @@ export default class ListComponent extends Component{
         return (
             <div>
                 {this.props.data.map((item,index)=>(
-                    <ListItem key={index}/>
+                    <ListItem data={item} key={index}/>
                 ))}
             </div>
         )
