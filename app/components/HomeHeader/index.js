@@ -9,10 +9,10 @@ export default class HomeHeader extends Component{
             <div className="home-header back">
                 <div className="city">
                     {this.props.cityName}
-                    <i className="iconfont icon-xiangxia-2"> </i>
+                    <i className="iconfont icon-xiangxia2"> </i>
                 </div>
                 <div className="search">
-                    <i className="iconfont icon-sousuo-xiangxing"> </i>
+                    <i className="iconfont icon-sousuo-xianxing"> </i>
                     <input type="text"/>
                 </div>
                 <div className="profile">

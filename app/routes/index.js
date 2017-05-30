@@ -5,7 +5,7 @@ import React,{Component} from 'react';
 import {
     HashRouter as Router,//容器
     Route//单条组件
-}from 'react-router-dom'
+} from 'react-router-dom'
 import Home from '../containers/Home'
 export default class RouterMap extends Component{
     render(){

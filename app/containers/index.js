@@ -10,16 +10,17 @@ export default class App extends Component{
             done:false
         }
     }
-    componentDidMount(){
-        this.setState={
-            done:true
-        }
-    }
+
     render(){
         return (
             <div>
                 {this.state.done?<RouterMap/>:<div>正在加载。。。</div>}
             </div>
         )
+    }
+    componentDidMount(){
+        this.setState({
+            done:true
+        })
     }
 }

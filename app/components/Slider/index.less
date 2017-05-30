@@ -1,0 +1,35 @@
+.carousel{
+  ul{
+    display: flex;
+    flex-wrap: wrap;
+    li{
+      display: flex;
+      flex-direction:column;
+      width: 20%;
+      text-align: center;
+      font-size: 18px;
+      i{
+        line-height: 30px;
+        font-size: 20px;
+        color:#e9203d;
+      }
+      span{
+        line-height: 30px;
+      }
+    }
+  }
+}
+.dots{
+  display: flex;
+  justify-content: center;
+  li{
+    width:10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 10px 8px;
+    background: #ccc;
+  }
+  .active{
+    background: #e9203d;
+  }
+}
