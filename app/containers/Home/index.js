@@ -4,15 +4,24 @@
 import React,{Component} from 'react';
 import HomeHeader from '../../components/HomeHeader/index'
 import Slider from '../../components/Slider/index'
-import  Ad from './subpage/Ad.js'
-export default class Home extends Component{
+import Ad from './subpage/Ad.js'
+import List from './subpage/List'
+import {connect} from 'react-redux'
+class Home extends Component{
     render(){
         return (
             <div>
-                <HomeHeader cityName="北京"/>
+                <HomeHeader cityName={this.props.userInfo.cityName}/>
                 <Slider/>
                 <Ad/>
+                <List cityName={this.props.userInfo.cityName}/>
             </div>
         )
     }
 }
+//
+export default connect(
+    state=>{
+        return{userInfo:state.userInfo}//取出redux state中userInfo的数据，赋予给变量userInfo
+    }
+)(Home)
