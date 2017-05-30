@@ -15,11 +15,12 @@ export default class Slider extends Component {
         let opts={
             continuous:false,
             callback:(index)=>{
+                console.log(index);
                 this.setState({index})
             }
         };
         return (
-            <div className="">
+            <div>
                 <ReactSwipe className="carousel" swiperOptions={opts}>
                     <div>
                         <ul>
@@ -155,9 +156,9 @@ export default class Slider extends Component {
                     </div>
                 </ReactSwipe>
                 <ul className="dots">
-                    <li className={this.state.index==0?'active':''}> </li>
-                    <li className={this.state.index==1?'active':''}> </li>
-                    <li className={this.state.index==2?'active':''}> </li>
+                    <li className={this.state.index===0?'active':''}> </li>
+                    <li className={this.state.index===1?'active':''}> </li>
+                    <li className={this.state.index===2?'active':''}> </li>
                 </ul>
             </div>
         )
