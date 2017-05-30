@@ -3,7 +3,9 @@
  */
 import React from 'react'
 import ReactDOM from 'react-dom';
+import App from './containers/index.js'
+import 'assets/index.less'
 ReactDOM.render(
-    <h1>hello world</h1>,
+    <App/>,
     document.querySelector('#root')
 );
