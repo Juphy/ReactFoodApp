@@ -4,13 +4,16 @@
 import React, {Component} from 'react';
 import {getList} from '../../../fetch/home'
 import ListComponent from "../../../components/ListComponent/index";
+import LoadMore from "../../../components/LoadMore/index";
 
 export default class List extends Component {
     constructor() {
         super();
         this.state = {
             data: [],
-            hasMore: true
+            hasMore: true,//是否有更多
+            page:0,
+            isLoading:false
         }
     }
 
@@ -23,11 +26,20 @@ export default class List extends Component {
         result.then(res => res.json()).then(({hasMore, data}) => {
             this.setState({
                 hasMore,
-                data
+                data:this.state.data.concat(data),
+                isLoading:false
             })
         })
     }
-
+    //需要在当前写一个加载更多的函数，传递给loadMore，当点击按钮触发传递的函数
+    loadMore(){
+        this.setState({
+            page:this.state.page+1,
+            isLoading:true//每次加载更多是状态都应该为正在加载
+        },()=>{//这个函数可以获取到最新的页码状态
+            this.processData(getList(this.props.cityName, this.state.page));
+        })
+    }
     render() {
         return (
             <div>
@@ -36,6 +48,7 @@ export default class List extends Component {
                         <ListComponent data={this.state.data}/>
                         : <div>正在加载。。。</div>
                 }
+                <LoadMore hasMore={this.state.hasMore} loadMore={this.loadMore.bind(this)} isLoading={this.state.isLoading}/>
             </div>
         )
     }
