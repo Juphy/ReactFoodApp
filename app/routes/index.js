@@ -18,10 +18,12 @@ export default class RouterMap extends Component{
                 <Router>
                     <Switch>{/*只有当路径为/的时候才匹配路由*/}
                             <Route exact path='/' component={Home}/>
-                            <Route path="/detail/:id" component={Detail}/>
-                        {/*点击先跳转到登录页，登陆后在跳转到之前的页面，在login之后可能需要上一个路径,可有可没有*/}
-                            <Route path="/login/:route?" component={Login}> </Route>
-                            <Route path="/user" component={User}> </Route>
+
+                            <Route path="/detail/:id" component={Detail}/> {/*点击先跳转到登录页，登陆后在跳转到之前的页面，在login之后可能需要上一个路径,可有可没有*/}
+
+                            <Route path="/login/:route?" component={Login}/>
+
+                            <Route path="/user" component={User}/>
                     </Switch>
                 </Router>
             </div>
