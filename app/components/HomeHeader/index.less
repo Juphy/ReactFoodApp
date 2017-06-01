@@ -3,11 +3,13 @@
   display:flex;
   align-items: center;//垂直居中
   color: #fff;
-  .city{
-    flex:1;
+  &:nth-child(1){
+    flex:1.5;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    .city{
+      justify-content: center;
+      align-items: center;
+    }
   }
   .search{
     flex:4;
