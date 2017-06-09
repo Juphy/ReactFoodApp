@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Created by Administrator on 2017/5/30.
  */
 let path=require('path');
@@ -8,11 +8,12 @@ let extract=new ExtractTextPlugin('build.css');
 module.exports={
     entry:{
         index:'./app/index.js',
-        vendor:['react','react-dom','redux','react-redux','react-router-dom']
+        vendors:['react','react-dom','redux','react-redux','react-router-dom']
     },
     output:{
         path:path.resolve('dist'),
-        filename:'[name].js'
+        filename:'[name].js',
+	publicPath:'http://juphy.cn/dist/'
     },
     module:{
         rules:[
@@ -36,7 +37,7 @@ module.exports={
     devtool:'source-map',//错误是可以提醒源码错误，不会光显示bundle.js错误
     devServer:{
         proxy:{
-            '/api':'http://localhost:3000'
+            '/api':'http://localhost:4396'
         }
     }
 

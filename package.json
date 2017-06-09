@@ -4,7 +4,7 @@
   "description": "react reacct-ruter redux react-redux\r ## webpack\r     npm install webpack webpack-dev-server \r ## babel\r     npm install babel-core babel-loader babel-preset-es2015\r ## react",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --port 3002 --open --progress --colors",
+    "start": "webpack-dev-server --p",
     "build": "webpack -p"
   },
   "keywords": [],

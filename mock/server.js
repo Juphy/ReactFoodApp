@@ -3,10 +3,14 @@
  */
 let express=require('express');
 let app=express();
-app.listen(3000);
+app.listen(4396);
+app.use(express.static('../dist'));
 let bodyParser=require('body-parser');
 let ad=require('./home/ad');
 app.use(bodyParser.urlencoded({extended:true}));
+app.get('/',(req,res)=>{
+    res.sendFile('index.html')
+});
 app.get('/api/ad',(req,res)=>{
     res.send(ad)
 });
