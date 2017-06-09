@@ -13,7 +13,6 @@ module.exports={
     output:{
         path:path.resolve('dist'),
         filename:'[name].js',
-	publicPath:'http://juphy.cn/dist/'
     },
     module:{
         rules:[
@@ -37,7 +36,7 @@ module.exports={
     devtool:'source-map',//错误是可以提醒源码错误，不会光显示bundle.js错误
     devServer:{
         proxy:{
-            '/api':'http://localhost:4396'
+            '/api':'http://localhost:3000'
         }
     }
 
