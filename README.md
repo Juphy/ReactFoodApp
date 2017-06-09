@@ -1,7 +1,7 @@
 ## react技术栈
     react reacct-ruter redux react-redux
 ## webpack
-    npm install webpack webpack-dev-server -
+    npm install webpack webpack-dev-server -D
 ## babel
     npm babel-core babel-loader bebel-preset-es2015 bebel-preset-stage-0 babel-preset-react css-loader style-loader less less-loader html-webpack-plugin -D
 ## react
